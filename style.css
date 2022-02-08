@@ -1,28 +1,44 @@
-aside#IZQ {
+div#IZQ {
             width: 20%;
             height: 80%;
             border-style: solid;
             border-color: black;
-            position:fixed; 
-            top:20%;
-            right: 80%; 
-            left: 0%;
+            position: absolute;
+            top:30.4%;
+            right: 78.9%; 
+            left:0.45%;
             background-color: lightgray;
-            overflow:auto;
+            overflow:hidden;
             float:left;
         }
-aside#DER { 
+div#DER1 { 
             width:20%;
-            height: 80%;
+            height: 30%;
             border-style: solid;
             border-color: black;
             position: fixed;
-            top:20%;
-            left: 79%;
+            top:30.4%;
+            left: 79.1%;
+            right: 0.5%;
             background-color: lightgray;
-            overflow:auto;
-            float:right;
-            
+            overflow:hidden;
+            float: right;
+           
+}
+
+div#DER2 { 
+        width:20%;
+        height: 30%;
+        border-style: solid;
+        border-color: black;
+        position: fixed;
+        top:65%;
+        left: 79.1%;
+        right: 0.5%;
+        background-color: lightgray;
+        overflow:hidden;
+        float: right;
+       
 }
 
 h1#seccion{
@@ -37,15 +53,98 @@ li {
     font-weight: bold;
     text-align: center;
     margin-right: 10%;
+    border-style: solid;
+    padding: 5%;
 }
 
-section {
+a:link {
+        color:black;
+        text-decoration:none;    
+}
+
+section#texto {
         width:50%;
         margin-left: 25%;
         margin-right: 25%;
         margin-top:10%;
 }
 
+
+img#clara {
+        width:100%;
+        height: 280px;
+    }
+
+
+img#aula{display: inline;
+        margin-top: 60%;
+        margin-bottom: 5%;
+        margin-right: 40%;
+        border-style: solid;
+        border-color: black;
+        width: 20%;
+        height: 200px; 
+        position: absolute;
+        right: 5%;
+        z-index: 1;
+     
+}
+
+img#instituto{  
+                display: inline;
+                margin-top: 60%;
+                margin-bottom: 5%;
+                margin-left: 40%;
+                border-style: solid;
+                border-color: black;
+                width: 20%;
+                height: 200px;
+                z-index: 2;
+                position:absolute;
+                }
+
+img#sr1e{display:inline;
+        margin-top: 60%;
+        margin-bottom: 5%;
+        margin-left: 40%;
+        border-style: solid;
+        border-color: black;
+        width: 20%;
+        height: 200px;  
+        position:absolute;
+        left: 6%;
+        z-index: 1;
+       
+}
+
+img#aula:hover {
+                z-index: 4;  
+               
+}
+
+img#instituto:hover {
+                    z-index:4;
+                 
+}
+
+img#sr1e:hover {
+                z-index:4;
+}
+
+img#bannerbici {
+        height: 220px;
+        width: 100%;
+        border-style:double;
+        border-right: hidden;
+        border-left: hidden;
+        border-top: hidden;
+        border-color: black;
+}
+
+p#bici {margin-bottom: 10%;
+        margin-left:5%;
+        margin-right: 5%;
+        margin-top: 0%}
 body{
     background-color: antiquewhite;
 }

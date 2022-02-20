@@ -1,84 +1,178 @@
-div#IZQ {
-            width: 20%;
-            height: 80%;
-            border-style: solid;
-            border-color: black;
-            position: absolute;
-            top:30.4%;
-            right: 78.9%; 
-            left:0.45%;
-            background-color: lightgray;
-            overflow:hidden;
-            float:left;
+img#clara {
+        width:100%;
+        height: 270px
+    }
+    
+/* En este div IZQ damos estetica al menu principal de la izquierda
+ con overflow hidden para que al minimizar se esconda el contenido que se desborda de la caja */
+div#IZQ         {
+                width: 350px;
+                height: 900px;
+                border-style: solid;
+                border-color: black;
+                position: absolute;
+                top:300px; 
+                left:10px;
+                background-color: lightgray;
+                overflow:hidden;
+                float:left
+                }
+/* En este div DER1 es donde se encuentra el banner de la bicicleta le ponemos borde background y lo ajustamos a la derecha 
+tiene position fixed para que se desplaze al hacer scroll down dado que es un banner */
+div#DER1        { 
+                width: 335px;
+                height: 250px;
+                border-style: solid;
+                border-color: black;
+                position: fixed;
+                margin-bottom: 5px;
+                top:300px;
+                right: 10px;
+                background-color: lightgray;
+                overflow:hidden;
+                float: right
+                }
+/* aqui damos formato al banner de la bici y le ponemos altura etc y algunos de sus bordes en hidden para que no se superponga con el borde del div 
+exceptoel border bottom que tiene un borde doble */
+img.banner {
+        height: 80%;
+        width: 100%;
+        border-style:double;
+        border-right: hidden;
+        border-left: hidden;
+        border-top: hidden;
+        border-color: black
         }
-div#DER1 { 
-            width:20%;
-            height: 30%;
-            border-style: solid;
-            border-color: black;
-            position: fixed;
-            top:30.4%;
-            left: 79.1%;
-            right: 0.5%;
-            background-color: lightgray;
-            overflow:hidden;
-            float: right;
-           
-}
-
-div#DER2 { 
-        width:20%;
-        height: 30%;
+    
+/* aqui ajustamos el parrafo del banner que va debajo de la bici al div */
+p.banner {
+        font-size: 100%;
+        margin-bottom: 10px;
+        margin-left:5px;
+        margin-right: 5px;
+        margin-top: 0px
+        }
+    
+/* segundo banner a la derecha donde damos casi las mismas opciones pero en vez de top 300 top 600 para que quede debajo
+tambien position fixed para que se desplaze al hacer scroll down debido a que es un banner */
+div#DER2        { 
+                width: 335px;
+                height: 250px;
+                border-style: solid;
+                border-color: black;
+                position: fixed;
+                margin-top: 5px;
+                top: 600px;
+                right: 10px;
+                background-color: lightgray;
+                overflow:hidden;
+                float:right
+                }
+    
+/* las siguientes clases son para los contenedores de resumenes de noticias de la pagina principal 
+en container tenemos nuestra cajita
+*/
+.container{
+        width: 100%;
+        height: 270px
+        }
+/* con card es donde va a ir la imagen del resumen con algunos efectos como el box-shadow (Sombra de la caja) etc... */
+.card{
+        width: 100%;
         border-style: solid;
         border-color: black;
-        position: fixed;
-        top:65%;
-        left: 79.1%;
-        right: 0.5%;
-        background-color: lightgray;
-        overflow:hidden;
-        float: right;
-       
-}
-
-h1#seccion{
-            font-size: 500%;
-            text-align: center;
-            margin-top: 5%;
-            text-decoration-line: underline;
+        margin:10px;
+        display: flex;
+        border-radius:6px;
+        overflow: hidden;
+        background: lightgray;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+        cursor:default;
+        transition: all 400ms ease
+        }
+        
+/* en este hover para que al ponernos encima de la caja con el raton cambie la posicion y la sombra de la caja y consiga un efecto interesante */
+.card:hover{
+        box-shadow: 10px 10px 30px rgba(0,0,0,0.4);
+        transform:translateY(-3%)
+        }
+        
+/* damos formato a la imagen que va dentro de la caja con esta clase */   
+.card img{
+        width: 200px;
+        height: 200px ;
+        vertical-align: auto
+        }
+        
+/* con estos tres contenidos p, h3, y a damos formato a las letras que van a ir dentro de la cajita del resumen le damos color, margenes, etc... */
+.contenido p{
+        line-height: 1.5;
+        color:#6a6a6a
+        }
+        
+.contenido h3{
+        font-weight:400;
+        margin-bottom: 15px
+        }
+        
+.contenido a{
+        text-decoration: none;
+        display:inline-block;
+        padding:10px;
+        color:black;
+        border:1px solid black;
+        background-color: lightgrey;  
+        border-radius: 60px;
+        transition:all 400ms ease
+        }
+        
+/* con estas dos clases y hover conseguimos tambien un efecto interesante en lo que es el contenido del link de leer mas */
+.card .contenido a:hover{
+        background: black;
+        color:antiquewhite
+        }
+    
+/* con este li damos formato al menu principal, notese que tiene un poco de margen a la izq porque al poner <menu> en html desplaza los elementos un poco a la derecha
+ademas overflow hidden para cuando se minimize no se desborde y quede entro de la caja aunque escondido, y con solo color:black; ponemos las letras de color negro */
+li.menu{
+        list-style: none;
+        font-size: 250%;
+        font-weight: bold;
+        text-align: center;
+        margin-right: 17%;
+        margin-left:5%;
+        border-style: solid;
+        border-color:black;
+        color:black;
+        padding: 5%;
+        overflow: hidden;
+        background-color: lightgrey
             }
-li {
-    list-style: none;
-    font-size: 350%;
-    font-weight: bold;
-    text-align: center;
-    margin-right: 10%;
-    border-style: solid;
-    padding: 5%;
-}
-
+    
+li.menu:hover{background-color: black;
+        color: antiquewhite
+        }
+/* esta pseudoclase la he puesto para que al pinchar los links no cambien de color en la pagina dejando una estetica fea */
 a:link {
         color:black;
-        text-decoration:none;    
-}
-
-section#texto {
+        text-decoration:none   
+        }
+    
+/* con este formato de la clase texto tambien conseguimos alinear los margenes de las seccion y así conseguir que las cajas container etc queden alineadas
+una detras de otra */
+    
+section.texto {
         width:50%;
         margin-left: 25%;
         margin-right: 25%;
-        margin-top:10%;
-}
-
-
-img#clara {
-        width:100%;
-        height: 280px;
-    }
-
-
-img#aula{display: inline;
-        margin-top: 60%;
-        margin-bottom: 5%;
+        margin-top:2%
+        }
+    
+    
+    
+/* aqui esta la alineacion de imagenes del final, se ha usado z-index para superponerlas y que consiga un efecto estetico bonito */
+img#aula{
+        margin-top: 5%;
         margin-right: 40%;
         border-style: solid;
         border-color: black;
@@ -87,13 +181,11 @@ img#aula{display: inline;
         position: absolute;
         right: 5%;
         z-index: 1;
-     
-}
-
+        transition: all 400ms ease
+        }
+    
 img#instituto{  
-                display: inline;
-                margin-top: 60%;
-                margin-bottom: 5%;
+                margin-top: 5%;
                 margin-left: 40%;
                 border-style: solid;
                 border-color: black;
@@ -101,11 +193,11 @@ img#instituto{
                 height: 200px;
                 z-index: 2;
                 position:absolute;
+                transition: all 400ms ease
                 }
-
-img#sr1e{display:inline;
-        margin-top: 60%;
-        margin-bottom: 5%;
+    
+img#sr1e{
+        margin-top: 5%;
         margin-left: 40%;
         border-style: solid;
         border-color: black;
@@ -114,37 +206,150 @@ img#sr1e{display:inline;
         position:absolute;
         left: 6%;
         z-index: 1;
-       
-}
-
-img#aula:hover {
-                z-index: 4;  
-               
-}
-
-img#instituto:hover {
-                    z-index:4;
-                 
-}
-
-img#sr1e:hover {
-                z-index:4;
-}
-
-img#bannerbici {
-        height: 220px;
-        width: 100%;
-        border-style:double;
-        border-right: hidden;
-        border-left: hidden;
-        border-top: hidden;
+        transition: all 400ms ease;
+        }
+    
+/* con este hover jugamos conlos z-index para dependiendo de en que imagen este encima se muestre una u otra*/
+img#aula:hover {z-index: 4 }
+    
+img#instituto:hover {z-index:4}
+    
+img#sr1e:hover {z-index:4}
+    
+img#mapa{ 
+        margin-top:18%;
+        border-style: solid;
         border-color: black;
-}
+        width: 1400px
+        }
+    
+h1#insti{
+        font-size: 250%;
+        margin-top:9%;
+        margin-left: 7%;
+        float: left;
+        position:absolute
+        }
+    
+    
+img#flecha{
+        margin-left: 35%;
+        margin-top: 5%;
+        transition: all 400ms ease
+        }
+    
+img#flecha:hover{   
+                transform:translateY(-5%)        
+                }
 
-p#bici {margin-bottom: 10%;
-        margin-left:5%;
-        margin-right: 5%;
-        margin-top: 0%}
-body{
-    background-color: antiquewhite;
-}
+/* Aqui empieza el css de la seccion de eventos */
+
+.viwerimages    {
+                position:sticky;
+                display: block;
+                width: 100%;
+                height: fit-content
+                }
+            
+.fotos{
+        position: relative;
+        display: flex;
+        width: 100%;
+        margin:40px;
+        justify-content: center
+        }
+            
+.imageorder:first-child{opacity: 1}
+
+.imageorder:target{opacity: 1}
+
+.imageorder     {
+                position: absolute;
+                margin:5px;
+                opacity: 0;
+                transition: opacity 0.5s
+                }
+.enlace{
+        position: absolute;
+        width:100%;         
+        display: block;
+        flex-wrap: wrap;
+        font-size: 15px;
+        bottom: -250px;
+        left:10px
+        }
+            
+.album{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 40px
+        }
+            
+.albumChild{
+        width: auto;
+        height: 250px;
+        margin:10px
+        }
+            
+.valorant{
+        width: 90%;
+        margin:5%;
+        height: auto
+        }
+
+            
+.cajas a        {
+                padding: 5px;
+                width: 80px;
+                display: block;
+                background: #6a6a6a;
+                text-decoration: none;
+                color:black;
+                margin: 5px;
+                border-radius: 20px;
+                text-align: center
+                }
+            
+.cajas a:hover{background: #16e6c3a1}
+            
+h3.ache3{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 40px;
+        text-align: center
+        }
+            
+h2.ache2{
+        font-size: 50px;
+        margin-bottom:50px;
+        font-family: 'Bebas Neue', cursive
+        }
+
+p.parra{
+        font-size: 20px;
+        text-align: justify;
+        font-family: 'Ubuntu', sans-serif
+        }
+
+/* Aqui empieza el css de la seccion de Sucesos */
+
+#discodurofoto{width: 500px}
+        
+.primtit{
+        color: #779ecb;
+        font-size: 45px
+        }
+
+.primcabec{
+        font-size: 30px;
+        color: grey
+        }
+
+.cuerpesito{
+        font-size: 20px
+        }
+        
+#tinder{
+        width: 500px
+        }

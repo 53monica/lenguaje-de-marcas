@@ -1,58 +1,129 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
+    <!--Equipo POWERRANGERS formado por:
+    JESÚS GUZMÁN, MÓNICA DIAZ, JUANCARLOS RUIZ, JUAN FERNÁNDEZ, MARIO GONZÁLEZ-->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="claranews" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="PowerRangers"> <!--Nombre del autor-->
+    <meta name="lang" content="es"> <!--Idioma Castellano-->
+    <meta name="description" content="Periodico Clara News"><!--Periodico-->
+    <!-- Con este link rel stylesheet linkeamos el html con su correspondiente css-->
     <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Con el link rel icon conseguimos poner un logo en la pestaña de la web-->
+    <link rel="icon" href="logo.png">
+
     <title>Clara News</title>
 </head>
 <body>
-    <img src="cabeceraclara.png" id="clara">
+    <!-- Imagen principal de cabecera -->
+    <a name="arriba"><img src="cabeceraclara.png" id="clara"></a>
+
+    <!-- Aquí va el menu principal de la izquierda dentro de etiqueta semántica aside y nav para luego meterlo en un contenedor div-->
     <aside>
         <nav>
         <div id="IZQ">
-        <h1 id="seccion">Secciones</h1>
             <menu>
-                <li><a href="Eventos.html">Eventos</a></li>
-                </br>
-                </br>
-                <li><a href="Sucesos.html">Sucesos</a></li>
-                </br>
-                </br>
-                <li><a href="Deportes.html">Deportes</a></li>
-                </br>
-                </br> 
+                <br/>
+                <br/>
+                <!-- Poniendo el a href antes de li consigo que en la página accedan al link pudiendo pinchar en toda la caja del del li dado con css-->
+                <a href="index.html"><li class="menu">Inicio</li></a>
+                <br/>
+                <br/>
+                <a href="Eventos.html"><li class="menu">Eventos</li></a>
+                <br/>
+                <br/>
+                <a href="Sucesos.html"><li class="menu">Sucesos</li></a>
+                <br/>
+                <br/>
+                <a href="Deportes.html"><li class="menu">Deportes</li></a>
+                <br/>
+                <br/> 
             </menu>
         </div>
         </nav>
     </aside>
-    <section id="texto">
+    <!-- Aquí van los diferentes div anidados que luego se da formato en css para el resumen de noticias principales de la página-->
+    <section class="texto">
         <article>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere id accusantium ex blanditiis inventore pariatur quasi odio harum minima dolorum? Fugit modi optio cumque obcaecati excepturi ducimus cum quia maiores.
-        
-            </p>
+            <div class="container">
+                <div class="card">
+                    <figure>
+                        <img src="events.png">
+                    </figure>
+                    <div class="contenido">
+                        <h3>MADRID SKILLS</h3>
+                        <p>Las Madrid Skills son competiciones de Formación Profesional en Madrid que ponen a prueba las habilidades delos alumnos. Además,son un punto de encuentro para estudiantes, profesores y profesionales de diversos campos...</p>
+                        <a href="Eventos.html">leer mas</a>
+                    </div>
+                </div>
+            </div>
         </article>
     </section>
-    <section>
-
+    <section class="texto">
         <article>
-
+            <div class="container">
+                <div class="card">
+                    <figure>
+                        <img src="sucesoscl3.png">
+                    </figure>
+                    <div class="contenido">
+                        <h3>SIN ESPACIO EN DISCO</h3>
+                        <p>Los alumnos de primero de ASIR se quejan al jefe de estudios de que no les queda espacio en el disco duro de clase. El delegado afirma con un bocata que si no se toman medidas pronto se llevará este caso al ministerio...</p>
+                        <a href="Sucesos.html">leer mas</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="texto">
+        <article>
+            <div class="container">
+                <div class="card">
+                    <figure>
+                        <img src="deportescl2.png">
+                    </figure>
+                    <div class="contenido">
+                        <h3>COPA CLARA DEL REY</h3>
+                        <p>Ha llegado la fiebre de las carreras al IES Clara Del Rey, desde los alumnos con sus ciclomotores hasta los profesores en sus bicicletas, sí sí como lo oyen, tras esta iniciativa no esta otro más que nuestro amado y respetado Jefe de Estudios...</p>
+                        <a href="Deportes.html">leer mas</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+            <!--Aquí van los banners de la derecha de la pagina, si pinchas en el banner te redirige a otra web externa para hacer la compra-->
+    <aside>
+        <div id="DER1">
+            <a href="https://www.decathlon.es/es/browse/c0-deportes/c1-ciclismo/c2-bicicletas/_/N-uuyrx7" target="_blank"><img src="bannerbici.PNG" class="banner"></a>
+            <p class="banner">¡Pinche en la imagen para comprar sus bicicletas al mejor PRECIO!</p>
+        </div>
+    </aside>
+    <aside>
+        <div id="DER2">
+            <a href="http://www.librosfp.es" target="_blank"><img src="LIBROSFP.jpg" class="banner"></a>
+            <p class="banner"> ¡Pinche en la imagen para ver libros de FP con los precios mas bajos!</p>
+        </div>
+    </aside>
+    </section>
+    <!-- Aquí van las diferentes fotos del insituto -->
+    <section>
+        <article>
+            <h1 id="insti">Fotos IES Clara del Rey: </h1>
             <img src="aula.jpg" id="aula">
             <img src="instituto.jpg" id="instituto">
             <img src="sr1e.jpg" id="sr1e">
         </article>
     </section>
-    <aside>
-        <div id="DER1">
-            <a href="https://www.decathlon.es/es/browse/c0-deportes/c1-ciclismo/c2-bicicletas/_/N-uuyrx7"><img src="bannerbici.PNG" id="bannerbici"></a>
-            <p id="bici">¡Pinche en la imagen para Comprar sus bicis al mejor PRECIO!</p>
-        </div>
-    </aside>
-    <aside>
-        <div id="DER2">
-            <p> aqui va otro banner</p>
-        </div>
-    </aside>
+    <footer>
+        <img src="Contactos.png" usemap="#mapacon" id="mapa">
+        <map name="mapacon">
+            <area shape="rect" coords="0, 78, 90, 198" href="https://www.facebook.com" target="_blank" ALT="Facebook">
+            <area shape="rect" coords="112, 80, 235, 198" href="https://www.instagram.com" target="_blank" ALT="Instagram">
+            <area shape="rect" coords="250, 78, 430, 198" href="https://twitter.com/iesClaraDelRey" target="_blank" ALT="Twitter">
+            <area shape="rect" coords="435, 78, 610, 198" href="https://www.whatsapp.com/?lang=es" target="_blank" ALT="whatsapp">
+        </map>
+        <br/>
+        <a href="#arriba"><img src="flecha3.png" id="flecha"></a>
+    </footer>
+
 </body>
 </html>
